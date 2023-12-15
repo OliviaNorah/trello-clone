@@ -13,6 +13,8 @@ import {
 
 import { useRouter, usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
+import { GSP_NO_RETURNED_VALUE } from "next/dist/lib/constants";
+import { Skeleton } from "@/components/ui/skeleton";
 
 export type Organization = {
     id: string;
@@ -108,5 +110,16 @@ export const NavItem = ({
                 ))}
             </AccordionContent>
         </AccordionItem>
+    )
+}
+
+NavItem.Skeleton = function SkeletonNavItem() {
+    return (
+        <div className="flex items-center gp-x-2">
+            <div className="w-10 h-10 relative shrink-0">
+                <Skeleton className="h-full w-full absolute"/>
+            </div>
+            <Skeleton className="h-10 w-full"/>
+        </div>
     )
 }

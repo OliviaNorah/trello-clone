@@ -2,7 +2,6 @@
 
 import { Skeleton } from "@/components/ui/skeleton";
 import { useOrganization } from "@clerk/nextjs"
-import { Organization } from "@clerk/nextjs/server";
 import { CreditCard } from "lucide-react";
 import Image from "next/image";
 
@@ -11,9 +10,7 @@ export const Info = () => {
 
     if (!isLoaded) {
         return (
-            <p>
-                <Info.Skeleton />
-            </p>
+            <Info.Skeleton />
         )
     }
 

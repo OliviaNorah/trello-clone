@@ -2,7 +2,7 @@ import { auth } from "@clerk/nextjs";
 
 import { db } from "@/lib/db";
 
-const DAY_IN_MS = 84_400_00;
+const DAY_IN_MS = 86_400_00;
 
 export const checkSubscription = async () => {
     const { orgId } = auth();
